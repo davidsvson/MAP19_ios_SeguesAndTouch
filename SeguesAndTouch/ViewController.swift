@@ -24,9 +24,11 @@ class ViewController: UIViewController {
         let translation = sender.translation(in: self.view)
         
         if let viewToPan = sender.view {
-            // move view to pan
+            viewToPan.center = CGPoint(x: viewToPan.center.x + translation.x,
+                                       y: viewToPan.center.y + translation.y)
+                
         }
-        
+        sender.setTranslation(CGPoint.zero, in: self.view)
     }
     
 }

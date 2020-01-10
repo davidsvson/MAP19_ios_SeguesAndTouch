@@ -15,20 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="zzW-vG-jqq">
-                                <rect key="frame" x="87" y="91" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Irf-dy-tHZ" appends="YES" id="XUS-31-mMP"/>
-                                </connections>
-                            </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="Qn1-nQ-sFS">
                                 <rect key="frame" x="87" y="472" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bgB-5b-yTH" appends="YES" id="nNO-mO-vQY"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="zzW-vG-jqq">
+                                <rect key="frame" x="87" y="91" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Irf-dy-tHZ" appends="YES" id="XUS-31-mMP"/>
+                                    <outletCollection property="gestureRecognizers" destination="YXx-hy-JlW" appends="YES" id="4s6-L6-P6y"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -45,6 +46,11 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="bgB-5b-yTH" userLabel="DogPanGestureRec">
                     <connections>
                         <action selector="handlePan:" destination="BYZ-38-t0r" id="qKv-rz-fzz"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="YXx-hy-JlW" userLabel="CatPanGestureRec">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="7N8-95-vRd"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
