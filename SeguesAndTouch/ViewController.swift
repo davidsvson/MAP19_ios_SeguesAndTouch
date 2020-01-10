@@ -15,6 +15,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func catTapped(_ sender: UITapGestureRecognizer) {
+        print("mjau")
+    }
+    
+    
+    @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.view)
+        
+        if let viewToPan = sender.view {
+            // move view to pan
+        }
+        
+    }
+    
 }
 
